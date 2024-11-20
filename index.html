@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small Town Real Estate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#map-section">Map</a></li>
+      <li><a href="#portfolio">Our Creations</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#developer">About Us</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Small Town Real Estate</h1>
+    <p>Transforming spaces, enriching lives.</p>
+    <canvas id="animated-bg"></canvas>
+  </header>
+
+  <!-- Map Section -->
+  <section id="map-section">
+    <h2>Explore Our Town</h2>
+    <div id="map"></div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Our Creations</h2>
+    <div class="property-slideshow">
+      <div class="property" id="property1">
+        <img src="building1.jpg" alt="Building 1">
+        <p>Building 1: A modern apartment complex with stunning city views.</p>
+      </div>
+      <div class="property" id="property2">
+        <img src="building2.jpg" alt="Building 2">
+        <p>Building 2: A luxurious villa designed for comfort and elegance.</p>
+      </div>
+      <div class="property" id="property3">
+        <img src="building3.jpg" alt="Building 3">
+        <p>Building 3: A bustling commercial space perfect for businesses.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Small Town Real Estate made my dream home a reality. Fantastic team!"</p>
+        <h4>- Jane Smith</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Their attention to detail is unparalleled. Highly recommend!"</p>
+        <h4>- Mark Johnson</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Professional, efficient, and delivered ahead of schedule."</p>
+        <h4>- Sarah Williams</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Small Town Real Estate | Built with ❤️ in Small Town</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

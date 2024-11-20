@@ -1,5 +1,5 @@
 // Initialize OpenStreetMap
-const map = L.map('map').setView([35.6895, 139.6917], 13); // Replace with your town's coordinates
+const map = L.map('map').setView([18.280316, 83.337033], 13); // Replace with your town's coordinates
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors',
 }).addTo(map);
@@ -8,24 +8,24 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 const properties = [
   {
     name: 'Building 1',
-    lat: 35.6895,
-    lng: 139.692,
+    lat: 18.281316,
+    lng: 83.336033,
     description: 'A modern apartment complex with stunning city views.',
-    image: 'building1.jpg',
+    image: 'assets/building1.jpg',
   },
   {
     name: 'Building 2',
-    lat: 35.688,
-    lng: 139.69,
+    lat: 18.282316,
+    lng: 83.337033,
     description: 'A luxurious villa designed for comfort and elegance.',
-    image: 'building2.jpg',
+    image: 'assets/building2.jpg',
   },
   {
     name: 'Building 3',
-    lat: 35.687,
-    lng: 139.693,
+    lat: 18.280316,
+    lng: 83.334033,
     description: 'A bustling commercial space perfect for businesses.',
-    image: 'building3.jpg',
+    image: 'assets/building3.jpg',
   },
 ];
 

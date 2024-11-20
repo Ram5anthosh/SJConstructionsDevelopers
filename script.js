@@ -73,3 +73,41 @@ function animateBackground() {
 }
 
 animateBackground();
+
+function createSlideshow(slideshowId, prevButtonId, nextButtonId) {
+    const slideshow = document.getElementById(slideshowId);
+    const slides = slideshow.getElementsByClassName('slide');
+    let currentIndex = 0;
+  
+    // Show the current slide and hide the others
+    function showSlide(index) {
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].classList.remove('active');
+      }
+      slides[index].classList.add('active');
+    }
+  
+    // Move to the next slide
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    // Move to the previous slide
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(currentIndex);
+    }
+  
+    // Set up event listeners for buttons
+    document.getElementById(nextButtonId).addEventListener('click', nextSlide);
+    document.getElementById(prevButtonId).addEventListener('click', prevSlide);
+  
+    // Start automatic sliding
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+  }
+  
+  // Initialize the slideshows
+  createSlideshow('property-slideshow', 'prev-property', 'next-property');
+  createSlideshow('testimonial-slideshow', 'prev-testimonial', 'next-testimonial');
+  

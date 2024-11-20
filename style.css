@@ -6,13 +6,11 @@ body, h1, h2, p, ul, li, a {
   }
   
   body {
-    background: linear-gradient(to bottom, #f0f8ff, #e0f7fa);
     color: #333;
     line-height: 1.6;
   }
   
   .navbar {
-    background: linear-gradient(to right, #004d40, #00695c);
     padding: 10px 20px;
     position: sticky;
     top: 0;
@@ -31,7 +29,6 @@ body, h1, h2, p, ul, li, a {
   
   .hero {
     position: relative;
-    background: linear-gradient(to bottom, #004d40, #00695c);
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -63,10 +60,72 @@ body, h1, h2, p, ul, li, a {
   }
   
   footer {
-    background: #004d40;
     color: white;
     text-align: center;
     padding: 10px;
     margin-top: 20px;
   }
+
+  body {
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb);
+  }
+  
+  .navbar {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+  }
+  
+  .hero {
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+  }
+  
+  #testimonials {
+    background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  }
+  
+  #portfolio {
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+  }
+  
+  footer {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+  }
+  
+  .slideshow-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .slide {
+    display: none;
+    text-align: center;
+  }
+  
+  .slide.active {
+    display: block;
+  }
+  
+  .slideshow-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .slideshow-buttons button {
+    background: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .slideshow-buttons button:hover {
+    background: #00695c;
+  }
+  
   

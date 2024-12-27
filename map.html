@@ -43,5 +43,48 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
+  <script>
+    // Initialize OpenStreetMap
+    const map = L.map('map').setView([18.280316, 83.337033], 13); // Replace with your town's coordinates
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+    }).addTo(map);
+
+    // Add Markers for Properties
+    const properties = [
+      {
+        name: 'Building 1',
+        lat: 18.281316,
+        lng: 83.336033,
+        description: 'A modern apartment complex with stunning city views.',
+        image: 'assets/building1.jpg',
+      },
+      {
+        name: 'Building 2',
+        lat: 18.282316,
+        lng: 83.337033,
+        description: 'A luxurious villa designed for comfort and elegance.',
+        image: 'assets/building2.jpg',
+      },
+      {
+        name: 'Building 3',
+        lat: 18.280316,
+        lng: 83.334033,
+        description: 'A bustling commercial space perfect for businesses.',
+        image: 'assets/building3.jpg',
+      },
+    ];
+
+    properties.forEach((property) => {
+      const marker = L.marker([property.lat, property.lng]).addTo(map);
+      marker.bindPopup(`
+        <div>
+          <h3>${property.name}</h3>
+          <img src="${property.image}" alt="${property.name}" style="width: 100%; height: auto; border-radius: 5px;">
+          <p>${property.description}</p>
+        </div>
+      `);
+    });
+  </script>
 </body>
 </html>

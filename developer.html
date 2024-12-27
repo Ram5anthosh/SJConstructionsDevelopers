@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SJ Developers</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <a href="#home" class="active">Logo</a>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="map.html">Map</a>
+        <a href="portfolio.html">Our Creations</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="developer.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div> 
+
+  <!--Developer-->
+  <section class="developer">
+    <div class="flex-developer">
+      <div class=""><h2>Our Builder</h2>
+      <p>Our builder, with seven years of dedicated experience, has consistently delivered high-quality projects that reflect craftsmanship and attention to detail.</p></div>
+      <div><img src="assets/building1.jpg"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 Small Town Real Estate | Built with ❤️ in Small Town</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -44,6 +44,54 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
-  <script>alert("jAVASCRIPT IS LOADED");</script>
+  <script>
+    // Animated Background
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Ensure the canvas has proper dimensions for circles
+      const canvas = document.getElementById('animated-bg');
+      const ctx = canvas.getContext('2d');
+
+      // Set canvas dimensions to account for device pixel ratio
+      function resizeCanvas() {
+        canvas.width = window.innerWidth * window.devicePixelRatio;
+        canvas.height = window.innerHeight * window.devicePixelRatio;
+        ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+      }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      let particles = [];
+      for (let i = 0; i < 100; i++) {
+        particles.push({
+          x: Math.random() * canvas.width / window.devicePixelRatio, // Scale down for drawing
+          y: Math.random() * canvas.height / window.devicePixelRatio,
+          radius: Math.random() * 4,
+          speedX: Math.random() * 2 - 1,
+          speedY: Math.random() * 2 - 1,
+          color: `rgba(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, 1)` // Random RGB color
+        });
+      }
+
+      function animateBackground() {
+        ctx.clearRect(0, 0, canvas.width / window.devicePixelRatio, canvas.height / window.devicePixelRatio);
+        particles.forEach((p) => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = p.color; // Assign random color to each particle
+          ctx.fill();
+          p.x += p.speedX;
+          p.y += p.speedY;
+
+          // Reverse direction if out of bounds
+          if (p.x < 0 || p.x > canvas.width / window.devicePixelRatio) p.speedX *= -1;
+          if (p.y < 0 || p.y > canvas.height / window.devicePixelRatio) p.speedY *= -1;
+        });
+        requestAnimationFrame(animateBackground);
+      }
+
+      animateBackground();
+    });
+  </script>
 </body>
 </html>

@@ -30,12 +30,28 @@
     </a>
   </div> 
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>SJ Developers</h1>
-    <p>Transforming spaces, enriching lives.</p>
-    <canvas id="animated-bg"></canvas>
-  </header>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Our Creations</h2>
+    <div class="slideshow-container" id="property-slideshow">
+      <div class="slide active">
+        <img src="assets/building1.jpg" alt="Building 1">
+        <p>Building 1: A modern apartment complex with stunning city views.</p>
+      </div>
+      <div class="slide">
+        <img src="assets/building2.jpg" alt="Building 2">
+        <p>Building 2: A luxurious villa designed for comfort and elegance.</p>
+      </div>
+      <div class="slide">
+        <img src="assets/building3.jpg" alt="Building 3">
+        <p>Building 3: A bustling commercial space perfect for businesses.</p>
+      </div>
+    </div>
+    <div class="slideshow-buttons">
+      <button id="prev-property">❮</button>
+      <button id="next-property">❯</button>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
@@ -44,6 +60,5 @@
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="script.js"></script>
-  <script>alert("jAVASCRIPT IS LOADED");</script>
 </body>
 </html>

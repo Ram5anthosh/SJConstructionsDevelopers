@@ -104,10 +104,20 @@ function createSlideshow(slideshowId, prevButtonId, nextButtonId) {
     document.getElementById(prevButtonId).addEventListener('click', prevSlide);
   
     // Start automatic sliding
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+    setInterval(nextSlide, 2000); // Change slide every 5 seconds
   }
   
   // Initialize the slideshows
   createSlideshow('property-slideshow', 'prev-property', 'next-property');
   createSlideshow('testimonial-slideshow', 'prev-testimonial', 'next-testimonial');
   
+// navbar
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

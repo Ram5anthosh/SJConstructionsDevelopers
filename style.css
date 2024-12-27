@@ -148,12 +148,14 @@ footer {
   background: linear-gradient(to right, #616161, #424242);
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 2vh;
   position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
-  height: 20px;
+  height: 8vh; /* Increased height for better text visibility */
+  overflow: hidden; /* Prevents overflow */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
 }
 
 .slideshow-container {
@@ -177,6 +179,11 @@ footer {
   display: block;
 }
 
+.slide img{
+  width: 100%;
+  height: auto;
+}
+
 .slideshow-buttons {
   display: flex;
   justify-content: center;
@@ -196,6 +203,18 @@ footer {
 
 .slideshow-buttons button:hover {
   background: #616161;
+}
+
+#testimonials {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Responsive Design */

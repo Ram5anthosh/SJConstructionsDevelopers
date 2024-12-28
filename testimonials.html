@@ -33,32 +33,39 @@
   </div> 
 
   <!-- Testimonials Section -->
-  <section id="testimonials">
-    <h2>What Our Customers Say</h2>
-    <div class="slideshow-container" id="testimonial-slideshow">
-      <div class="slide active">
-        <p>"Small Town Real Estate made my dream home a reality. Fantastic team!"</p>
-        <h4>- Jane Smith</h4>
+  <div class="container">
+    <section id="testimonials">
+      <h2>What Our Customers Say</h2>
+      <div class="slideshow-container" id="testimonial-slideshow">
+        <div class="slide active">
+          <p>"Small Town Real Estate made my dream home a reality. Fantastic team!"</p>
+          <h4>- Jane Smith</h4>
+        </div>
+        <div class="slide">
+          <p>"Their attention to detail is unparalleled. Highly recommend!"</p>
+          <h4>- Mark Johnson</h4>
+        </div>
+        <div class="slide">
+          <p>"Professional, efficient, and delivered ahead of schedule."</p>
+          <h4>- Sarah Williams</h4>
+        </div>
       </div>
-      <div class="slide">
-        <p>"Their attention to detail is unparalleled. Highly recommend!"</p>
-        <h4>- Mark Johnson</h4>
+      <div class="slideshow-buttons">
+        <button id="prev-testimonial">❮</button>
+        <button id="next-testimonial">❯</button>
       </div>
-      <div class="slide">
-        <p>"Professional, efficient, and delivered ahead of schedule."</p>
-        <h4>- Sarah Williams</h4>
-      </div>
-    </div>
-    <div class="slideshow-buttons">
-      <button id="prev-testimonial">❮</button>
-      <button id="next-testimonial">❯</button>
-    </div>
-  </section>
-  
+    </section>
+  </div>
 
+  <div class="matter">
+    <p>
+      We invite you to explore our customer testimonials, where you'll find heartfelt feedback from clients who have experienced our commitment to excellence firsthand. Each testimonial reflects their genuine satisfaction with our work, highlighting our attention to detail, creativity, and ability to bring their visions to life. Our clients consistently praise our professionalism, responsiveness, and dedication throughout the entire project journey, which not only meets but often exceeds their expectations. Their positive experiences serve as a testament to our passion for quality and our unwavering commitment to delivering outstanding results, reinforcing our reputation as a trusted partner in turning dreams into reality.
+    </p>
+  </div>
+  
   <!-- Footer -->
   <footer>
-    <p>© 2024 Small Town Real Estate | Built with ❤️ in Small Town</p>
+    <p class="footer-text">© 2025 SJ Constructions & Developers | Built with ❤️ in Small Town</p>
   </footer>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -94,7 +101,7 @@
       document.getElementById(prevButtonId).addEventListener('click', prevSlide);
     
       // Start automatic sliding
-      setInterval(nextSlide, 2000); // Change slide every 5 seconds
+      setInterval(nextSlide, 4000); // Change slide every 5 seconds
     }
     
     // Initialize the slideshows

@@ -33,31 +33,39 @@
   </div> 
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>Our Creations</h2>
-    <div class="slideshow-container" id="property-slideshow">
-      <div class="slide active">
-        <img src="assets/building1.jpg" alt="Building 1">
-        <p>Building 1: A modern apartment complex with stunning city views.</p>
+  <div class="container">
+    <section id="portfolio">
+      <h2>Our Creations</h2>
+      <div class="slideshow-container" id="property-slideshow">
+        <div class="slide active">
+          <img src="assets/building1.jpg" alt="Building 1">
+          <p>Building 1: A modern apartment complex with stunning city views.</p>
+        </div>
+        <div class="slide">
+          <img src="assets/building2.jpg" alt="Building 2">
+          <p>Building 2: A luxurious villa designed for comfort and elegance.</p>
+        </div>
+        <div class="slide">
+          <img src="assets/building3.jpg" alt="Building 3">
+          <p>Building 3: A bustling commercial space perfect for businesses.</p>
+        </div>
       </div>
-      <div class="slide">
-        <img src="assets/building2.jpg" alt="Building 2">
-        <p>Building 2: A luxurious villa designed for comfort and elegance.</p>
+      <div class="slideshow-buttons">
+        <button id="prev-property">❮</button>
+        <button id="next-property">❯</button>
       </div>
-      <div class="slide">
-        <img src="assets/building3.jpg" alt="Building 3">
-        <p>Building 3: A bustling commercial space perfect for businesses.</p>
-      </div>
-    </div>
-    <div class="slideshow-buttons">
-      <button id="prev-property">❮</button>
-      <button id="next-property">❯</button>
-    </div>
-  </section>
+    </section>
+  </div>
+
+  <div class="matter">
+    <p>
+      At SJ Constructions&Developers, we take pride in the diversity of our projects, reflecting the unique character and needs of each client we serve. From contemporary homes that embrace modern design principles to traditional structures that celebrate our rich cultural heritage, our portfolio showcases a wide range of architectural styles and functionalities. We’ve successfully tackled various projects, including residential buildings, commercial spaces, and community structures, each meticulously crafted to harmonize with its surroundings. Our commitment to understanding your vision means we’re not limited to a single style; instead, we embrace the uniqueness of every endeavor, ensuring that each project is a true representation of our clients’ aspirations and lifestyle. This dedication to versatility and creativity allows us to create spaces that not only meet practical demands but also inspire and elevate the everyday experience of those who inhabit them.
+    </p>
+  </div>
 
   <!-- Footer -->
   <footer>
-    <p>© 2024 Small Town Real Estate | Built with ❤️ in Small Town</p>
+    <p class="footer-text">© 2025 SJ Constructions & Developers | Built with ❤️ in Small Town</p>
   </footer>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
@@ -93,7 +101,7 @@
       document.getElementById(prevButtonId).addEventListener('click', prevSlide);
 
       // Start automatic sliding
-      setInterval(nextSlide, 2000); // Change slide every 5 seconds
+      setInterval(nextSlide, 4000); // Change slide every 5 seconds
     }
 
     // Initialize the slideshows
